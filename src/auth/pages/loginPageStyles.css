@@ -1,3 +1,36 @@
-div{
+.bgContainer{
+    height: 100vh;
+    width: 100vw;
     background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formContainer{
+    background-color: white;
+    padding: 20px;
+}
+
+.labelAnimationContainer{
+    border: 1px solid red;
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+
+.labelAnimationContainer input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.labelAnimationContainer label{
+    position: absolute;
+    left: 10px;
+    top:10px;
+    z-index: 10;
+    font-size: 20px;
 }
