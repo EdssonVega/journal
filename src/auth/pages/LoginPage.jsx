@@ -9,16 +9,16 @@ export const LoginPage = () => {
       <div className='formContainer'>
         <h1>Login</h1>
         <div className='labelAnimationContainer'>
-        <label htmlFor="">Email</label>
-        <input type="email" />
+        <input className='inputAnimation' type="email" placeholder='' />
+        <label className='labelAnimation' htmlFor="">Email</label>
 
         </div>
         <div className='labelAnimationContainer'>
-        <label htmlFor="">Password</label>
-        <input type="password" />
+        <input className='inputAnimation' type="password" placeholder=''/>
+        <label className='labelAnimation' htmlFor="">Password</label>
 
         </div>
-        <div>
+        <div className='buttonsContainer'>
           <button>
             LOGIN
           </button>
