@@ -52,6 +52,9 @@
     transition: all 0.35s;
 }
 
+.inputAnimation:focus{
+    border: 2px solid black;
+}
 
 .inputAnimation:focus ~ .labelAnimation, .inputAnimation:not(:placeholder-shown) ~ .labelAnimation{
     transform: scale(0.7)  translateY(-125%);
@@ -63,6 +66,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    gap: 15px;
 }
 
 .buttonsContainer button{
@@ -75,11 +79,11 @@
     border-radius: 5px;
     border: none;
     padding: 10px 0px;
-    width: 40%;
     cursor:pointer;
+    flex-grow: 1;
 }
 
-.formContainer a{
+.formContainer a, .formContainer p{
     color: black;
     align-self: flex-end;
 }

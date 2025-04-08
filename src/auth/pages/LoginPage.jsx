@@ -27,7 +27,7 @@ export const LoginPage = () => {
             GOOGLE
           </button>
         </div>
-        <NavLink >Crear una cuenta</NavLink>
+        <NavLink to={"/auth/register"} >Create an account</NavLink>
       </div>
     </div>
   )
