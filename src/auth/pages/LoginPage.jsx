@@ -1,15 +1,24 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import { FaGoogle } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { checkingAuthentication, startGoogleSignIn } from '../../store/auth/thunks';
 import "./loginPageStyles.css"
 
 export const LoginPage = () => {
+  const dispatch = useDispatch()
 
   const {register, handleSubmit, formState:{errors}} = useForm()
 
   const onSubmitLogin = (data)=> {
     console.log(data)
+    dispatch(checkingAuthentication())
+  }
+
+  const onGoogleSignIn = () => {
+    console.log("onGoogleSignIn");
+    dispatch(startGoogleSignIn())
   }
   return (
     <div className='bgContainer'>
@@ -32,7 +41,7 @@ export const LoginPage = () => {
           <button onClick={handleSubmit(onSubmitLogin)}>
             LOGIN
           </button>
-          <button>
+          <button onClick={onGoogleSignIn}>
           <FaGoogle />
             GOOGLE
           </button>
