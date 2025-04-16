@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { useForm } from 'react-hook-form';
 import { FaGoogle } from "react-icons/fa";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { checkingAuthentication, startGoogleSignIn } from '../../store/auth/thunks';
 import "./loginPageStyles.css"
 
 export const LoginPage = () => {
-  const dispatch = useDispatch()
+
+  const {status} = useSelector(state => state.auth)
+
+  const isAuthenticating = useMemo(()=> status === "checking",[status])
+
+   const dispatch = useDispatch()
 
   const {register, handleSubmit, formState:{errors}} = useForm()
 
@@ -38,10 +43,10 @@ export const LoginPage = () => {
         {errors.password?.type === "required" && <p className='textError'>Insert your password</p>}
 
         <div className='buttonsContainer'>
-          <button onClick={handleSubmit(onSubmitLogin)}>
+          <button disabled={isAuthenticating} onClick={handleSubmit(onSubmitLogin)}>
             LOGIN
           </button>
-          <button onClick={onGoogleSignIn}>
+          <button disabled={isAuthenticating} onClick={onGoogleSignIn}>
           <FaGoogle />
             GOOGLE
           </button>
