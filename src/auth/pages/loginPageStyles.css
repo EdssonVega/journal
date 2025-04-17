@@ -94,3 +94,17 @@
     color: red !important;
     align-self: flex-start !important;
 }
+
+.firebaseError{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(245, 172, 172, 0.692);
+    padding: 5px 0;
+    text-align: center;
+    gap: 10px;
+    border-radius: 5px;
+    color: rgb(175, 44, 44);
+    margin-bottom: -15px;
+    margin-top: 25px;
+}

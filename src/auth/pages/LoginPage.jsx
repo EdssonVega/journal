@@ -1,14 +1,16 @@
 import React, { useMemo } from 'react'
 import { useForm } from 'react-hook-form';
+import { BsExclamationCircle } from "react-icons/bs";
 import { FaGoogle } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { checkingAuthentication, startGoogleSignIn } from '../../store/auth/thunks';
+import {startGoogleSignIn, startLoginWithEmailPassword } from '../../store/auth/thunks';
 import "./loginPageStyles.css"
 
 export const LoginPage = () => {
 
-  const {status} = useSelector(state => state.auth)
+  const {status, errorMessage} = useSelector(state => state.auth)
+
 
   const isAuthenticating = useMemo(()=> status === "checking",[status])
 
@@ -18,7 +20,7 @@ export const LoginPage = () => {
 
   const onSubmitLogin = (data)=> {
     console.log(data)
-    dispatch(checkingAuthentication())
+    dispatch(startLoginWithEmailPassword(data))
   }
 
   const onGoogleSignIn = () => {
@@ -41,6 +43,8 @@ export const LoginPage = () => {
 
         </div>
         {errors.password?.type === "required" && <p className='textError'>Insert your password</p>}
+        
+        {errorMessage && <div className="firebaseError"><BsExclamationCircle />{errorMessage}</div>}
 
         <div className='buttonsContainer'>
           <button disabled={isAuthenticating} onClick={handleSubmit(onSubmitLogin)}>
