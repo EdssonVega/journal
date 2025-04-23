@@ -1,0 +1,33 @@
+.navbarContainer{
+    height: 75px;
+    width:calc(100vw - var(--ancho-caja));
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    border-bottom: 2px solid rgb(219, 216, 216);
+    border-top: 2px solid rgb(219, 216, 216);
+    box-shadow: 0 0 5px 0.5px rgb(219, 216, 216);
+}
+
+.navbarContainer h1{
+    color: white;
+    font-size: 18px;
+}
+
+.navbarContainer button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+}
+
+.logoutIcon{
+    color: red;
+    height: 100%;
+    width: 30px;
+}

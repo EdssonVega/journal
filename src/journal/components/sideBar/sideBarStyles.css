@@ -1,0 +1,28 @@
+.sideBarContainer{
+    width: var(--ancho-caja);
+    background-color: white;
+    height: 100vh;
+    border-right: 2px solid rgb(219, 216, 216);
+    border-bottom: 2px solid rgb(219, 216, 216);
+
+    box-shadow: 0 0 5px 0.5px rgb(219, 216, 216),
+                inset 0 0 5px 0.5px rgb(219, 216, 216)   ;
+    display: flex;
+    flex-direction: column;
+}
+
+.displayNameContainer{
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgb(219, 216, 216);
+    box-shadow: 0 0 5px 0.5px rgb(219, 216, 216),
+                inset 0 0 5px 0.5px rgb(219, 216, 216);
+    text-align: center;
+    text-transform:uppercase;
+    font-weight: 600;
+    font-size: ;
+}
+
+
