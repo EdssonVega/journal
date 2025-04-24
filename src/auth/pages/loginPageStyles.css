@@ -14,6 +14,7 @@
     width: 30vw;
     display: flex;
     flex-direction: column;
+    animation: fadeIn 0.25s linear 0s 1;
 }
 
 .formContainer h1{
@@ -107,4 +108,13 @@
     color: rgb(175, 44, 44);
     margin-bottom: -15px;
     margin-top: 25px;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

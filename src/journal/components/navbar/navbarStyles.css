@@ -1,6 +1,7 @@
 .navbarContainer{
     height: 75px;
-    width:calc(100vw - var(--ancho-caja));
+    /*width:calc(100vw - var(--ancho-caja));*/
+    width: 100%;
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
@@ -24,6 +25,13 @@
     align-items: center;
     justify-content: center;
     height: 70%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
+.navbarContainer button:hover{
+    background-color: rgba(216, 0, 0, 0.116);
+    transition: all 0.5s;
 }
 
 .logoutIcon{
