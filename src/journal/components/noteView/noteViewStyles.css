@@ -1,0 +1,63 @@
+.noteContainer{
+    align-self: flex-start;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tittleContainer{
+    background-color: rgb(230, 230, 230);
+    position: relative;
+    border-bottom: 2px solid gray;
+}
+
+.tittleContainer label{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+}
+
+.tittleContainer input{
+    background-color: transparent;
+    border: none;
+    height: 35px;
+    width: 100%;
+    padding:45px 0 30px 15px;
+}
+
+
+.noteContainer textarea{
+    background-color: rgb(230, 230, 230);
+    outline: none;
+    border:none;
+    border-bottom: 2px solid gray;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dateSaveContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dateSaveContainer button{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items:center;
+    gap: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+
+
+.saveIcon{
+    height: 35px;
+   width: 35px;
+}

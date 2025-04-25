@@ -1,0 +1,30 @@
+.noteSideBarContainer{
+    display: flex;
+    height: 100px;
+    place-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.noteSideBarContainer:hover{
+    background-color: rgb(230, 230, 230);
+    
+}
+
+
+.titleAndBodyContainer{
+    width: 100%;
+}
+.titleAndBodyContainer h1{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.titleAndBodyContainer p {
+    font-size: 15px;
+    color: gray;
+}
+
+.bookmarkIcon{
+    width: 30%;
+}

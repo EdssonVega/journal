@@ -3,6 +3,7 @@ import "./navbarStyles.css"
 import { IoIosLogOut } from "react-icons/io";
 import { useDispatch } from 'react-redux';
 import { startLogout } from '../../../store/auth/thunks';
+import { setActiveNote } from '../../../store/journal/journalSlice';
 
 
 export const Navbar = () => {
@@ -10,6 +11,7 @@ export const Navbar = () => {
 
     const onLogOut = () => {
         dispatch(startLogout())
+        dispatch(setActiveNote(null))
     }
 
   return (

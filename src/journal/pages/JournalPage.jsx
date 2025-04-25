@@ -4,11 +4,13 @@ import { Navbar } from '../components/navbar/Navbar'
 import { SideBar } from '../components/sideBar/SideBar'
 import { FaPlus } from "react-icons/fa";
 import "./journalStyles.css"
+import { NoteView } from '../components/noteView/NoteView';
+import { useSelector } from 'react-redux';
 
 export const ancho = 250
 
 export const JournalPage = () => {
-
+  const {active} = useSelector(state => state.journal)
 
   return (
     <div className='journalContainer'>
@@ -16,7 +18,11 @@ export const JournalPage = () => {
       <div className='notesContainer' style={{ '--ancho-caja': `${ancho}px` }}>
         <Navbar />
         <div style={{ width: '100%', height: '100%', display: 'grid', placeItems: 'center' }}>
-        <InitialScreen />
+        {
+          active === null ?
+          <InitialScreen />:
+          <NoteView />
+        }
         </div>
       </div>
       <button className='addNoteButton'>
