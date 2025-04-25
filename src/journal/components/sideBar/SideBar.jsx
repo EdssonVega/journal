@@ -25,7 +25,7 @@ export const SideBar = () => {
         <div>
           {
             notes.map((note)=>(
-              <NotesSideBar title={note.title} body={note.body} activeNote={() => onActiveNote(note.id)} />
+              <NotesSideBar title={note.title} body={note.body} id={note.id} activeNote={() => onActiveNote(note.id)} />
             ))
           }
         </div>
